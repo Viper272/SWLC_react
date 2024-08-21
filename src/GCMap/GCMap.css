@@ -1,0 +1,10 @@
+.GCMap {
+    height: 100vh;
+    background-color: grey;
+}
+
+#mapSVG {
+    border-radius: 1;
+    border-color: black;
+    border-style: solid;
+}
