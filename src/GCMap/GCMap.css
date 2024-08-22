@@ -1,10 +1,8 @@
-.GCMap {
-    height: 100vh;
-    background-color: grey;
-}
+.map-container {
+    overflow-y: hidden;
 
-#mapSVG {
-    border-radius: 1;
-    border-color: black;
-    border-style: solid;
+    width: 100vw;
+    height: 100dvh;
+
+    background-color: grey;
 }

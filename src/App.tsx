@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
 import * as signalR from "@microsoft/signalr";
 import GCMap from './GCMap/GCMap';
 

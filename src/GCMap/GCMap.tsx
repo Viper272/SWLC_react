@@ -96,11 +96,13 @@ export default function GCMap() {
     });
     // #endregion
 
+
+
     return(
-        <div className="GCMap">
-            <svg id="mapSVG" ref={zoomSVGRef} width={mapData.mapSize} height={mapData.mapSize} > 
+        <div className="map-container">
+            <svg id="map" ref={zoomSVGRef} 
+            style={{height:"100%", width:"100%"}}>
                 <g id="zoomSVGG">
-                    {/*<path d={delaunay.render()} stroke="white" fill="transparent"/>*/}
                     {voronoiCells}
                     {sectorLanes}
                     {sectorPoints}
