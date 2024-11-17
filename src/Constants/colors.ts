@@ -1,6 +1,7 @@
 const colors = {
     rebels: {
-        default: '#a91515'
+        default: '#a91515',
+        
     }
 }
 

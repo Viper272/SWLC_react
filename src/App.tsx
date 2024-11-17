@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import "./App.css"
+import { useEffect, useState } from 'react';
 import * as signalR from "@microsoft/signalr";
-import GCMap from './GCMap/GCMap';
+import GCMapContainer from "./Components/GCMap/GCMapContainer";
+import Login from "./Components/Login/Login";
 
 function App() {
   
   const [connection, setConnection] = useState<signalR.HubConnection>();
-  const [messages, setMessages] = useState("");
 
   useEffect(() => {
     const c = new signalR.HubConnectionBuilder()
       .withAutomaticReconnect()
-      .withUrl("http://localhost:5073/chatHub", {withCredentials: false})
+      .withUrl("https://localhost:7032/gamehub", {withCredentials: false})
       .build();
     //setConnection(c);
   }, [])
@@ -26,16 +27,11 @@ function App() {
       connection?.stop();
     })
   }, [connection])
-  
-  function onChatboxKeyUp(event: KeyboardEvent) {
-    if(event.key === "Enter") {
-      connection?.invoke("SendMessage", "viper", event.returnValue);
-    }
-  }
 
   return (
     <div className="App">
-      <GCMap/>
+      {/* <GCMapContainer/> */}
+      <Login/>
     </div>
   );
 }

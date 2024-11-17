@@ -1,0 +1,19 @@
+.MapContainer {
+    display: flex;
+    flex: 1;
+
+    flex-direction: row;
+    background-color: grey;
+}
+
+.Map {
+    flex: .8;
+
+    background-color: rgb(0, 139, 63);
+}
+
+.SectorInfo {
+    flex: .2;
+
+    background-color: cyan;
+}
